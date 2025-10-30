@@ -1,0 +1,385 @@
+/* --- HamroPaint Inspired Color Palette --- */
+:root {
+    --color-primary-dark: #1e3a5f; /* Dark Blue/Teal for Headings, Footer */
+    --color-accent-mint: #32d69e; /* Mint Green for CTA Buttons/Highlights */
+    --color-text-dark: #333;
+    --color-text-light: #f4f4f4;
+    --color-background-light: #f9f9f9;
+}
+
+/* --- Base & Utility --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h2, h3 {
+    color: var(--color-primary-dark);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary-dark);
+    transition: color 0.3s;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-right: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--color-accent-mint);
+    color: var(--color-primary-dark);
+    border: 2px solid var(--color-accent-mint);
+}
+
+.btn-primary:hover {
+    background-color: #24a87c; /* Slightly darker mint on hover */
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-primary-dark);
+    border: 2px solid var(--color-primary-dark);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary-dark);
+    color: #fff;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 900;
+    color: var(--color-primary-dark);
+}
+
+nav a {
+    margin-left: 25px;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+nav .cta-link {
+    background-color: var(--color-accent-mint);
+    color: var(--color-primary-dark);
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+nav .cta-link:hover {
+    background-color: #24a87c;
+}
+
+/* --- Hero Section --- */
+.hero {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.subtitle {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: var(--color-accent-mint);
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+.hero h2 strong {
+    color: var(--color-accent-mint);
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero-image-placeholder {
+    flex: 1;
+    height: 350px;
+    background-color: var(--color-background-light);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-dark);
+    text-align: center;
+    border: 1px dashed var(--color-primary-dark);
+}
+
+/* --- About Section --- */
+.about {
+    padding: 60px 0;
+    background-color: var(--color-background-light);
+}
+
+.about .container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.owner-photo {
+    flex: 1;
+    height: 300px;
+    background-color: #ddd;
+    border-radius: 50%; /* Circular photo for a personal touch */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    max-width: 300px;
+    min-width: 300px;
+    border: 5px solid var(--color-primary-dark);
+}
+
+.about-content {
+    flex: 2;
+}
+
+.small-text {
+    font-size: 0.8em;
+    color: var(--color-accent-mint);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.features-grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.features-grid div {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 3px solid var(--color-accent-mint);
+    font-size: 0.9em;
+}
+
+.features-grid i {
+    color: var(--color-primary-dark);
+    margin-right: 8px;
+}
+
+/* --- Brands Section --- */
+.brands {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.brand-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.brand-item {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: var(--color-background-light);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.brand-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.brand-item p {
+    margin-bottom: 5px;
+}
+
+.shades-info {
+    font-size: 1.2em;
+    color: var(--color-primary-dark);
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/* --- Footer (Contact & Location) --- */
+footer {
+    background-color: var(--color-primary-dark);
+    color: var(--color-text-light);
+    padding: 40px 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact-info h3 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    font-size: 1.05em;
+}
+
+.contact-info a {
+    color: var(--color-accent-mint);
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: var(--color-accent-mint);
+}
+
+.hours {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.map-link {
+    text-align: center;
+}
+
+.map-link .btn-primary {
+    background-color: var(--color-accent-mint);
+    color: var(--color-primary-dark);
+    border: none;
+    font-size: 1.1em;
+    padding: 15px 30px;
+    margin-bottom: 10px;
+}
+
+.map-link p {
+    font-size: 0.9em;
+}
+
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header .container, .hero .container, .about .container, footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    nav a {
+        margin: 0 10px;
+        display: inline-block;
+    }
+    
+    .hero {
+        padding: 50px 0;
+    }
+    
+    .hero-content {
+        order: 2;
+    }
+
+    .hero-image-placeholder {
+        order: 1;
+        margin-bottom: 30px;
+        height: 200px;
+    }
+
+    .hero h2 {
+        font-size: 2.5em;
+    }
+
+    .about .container {
+        gap: 30px;
+    }
+
+    .owner-photo {
+        margin: 0 auto 20px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .brand-list {
+        flex-direction: column;
+    }
+    
+    .contact-info, .map-link {
+        margin-bottom: 20px;
+    }
+}
